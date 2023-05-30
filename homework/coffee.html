@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee ☕</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        color: #5c4d4d;
+      }
+
+      h2 {
+        text-align: center;
+        border: 3px solid #5c4d4d;
+        line-height: 50px;
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 5px;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 15px;
+        margin: 20px 0 10px;
+      }
+
+      button {
+        display: block;
+        margin: 15px auto;
+        background-color: #a96851;
+        color: white;
+        font-size: 18px;
+        padding: 15px 20px;
+        border: none;
+        border-radius: 7px;
+        box-shadow: 5px 5px 10px rgb(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 30px 60px;
+      }
+
+      .learn-more {
+        padding-top: 10px;
+        text-decoration: none;
+        color: #915b4a;
+        font-size: 14px;
+      }
+
+      .learn-more:hover {
+        text-decoration: underline;
+      }
+
+      .footer {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>I love Coffee</h1>
+      <h2>Especially Cappuchino</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/076/515/original/coffee.jpg?1681241187"
+        alt="Coffee"
+      />
+      <p>
+        A cappuccino is the perfect balance of espresso, steamed milk and foam.
+        This coffee is all about the structure and the even splitting of all
+        elements into equal thirds. An expertly made cappuccino should be rich,
+        but not acidic and have a mildly sweet flavouring from the milk. And,
+        because the milk is not actually mixed in it gives the espresso a
+        stronger flavour.
+        <br />
+      </p>
+      <a
+        href="https://www.nescafe.com/gb/coffee-types/what-is-a-cappuccino/"
+        target="_blank"
+        class="learn-more"
+      >
+        Learn more in Néscafe
+      </a>
+      <button class="buy-button">👉 Buy Cappuchino Coffee</button>
+      <p class="footer">
+        This page was built by
+        <a
+          href="https://www.linkedin.com/in/mariana-tellez-resendiz-134354232"
+          target="_blank"
+          class="learn-more"
+        >
+          Mariana Tellez
+        </a>
+      </p>
+    </div>
+    <script>
+      function buy() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let emoji = prompt("What is your favorite emoji?");
+
+        alert(
+          "Thank you " +
+            name +
+            "! We'll be in touch by email, meanwhile have a cup of coffee!" +
+            emoji
+        );
+      }
+      let buyButton = document.querySelector(".buy-button");
+      buyButton.addEventListener("click", buy);
+    </script>
+  </body>
+</html>

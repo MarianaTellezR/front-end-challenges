@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Zone Dropdown - Mariana Tellez Resendiz</title>
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <!--Moment JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
+    <style>
+      h1 {
+        font-family: "Raleway", sans-serif;
+        color: rgb(33, 57, 122);
+        text-align: center;
+      }
+      select {
+        font-family: "Raleway", sans-serif;
+        font-size: 15px;
+        background-color: rgb(74, 103, 182);
+        color: white;
+        padding: 10px 15px;
+        border-radius: 20px;
+        border: 0px;
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Time Zone Dropdown</h1>
+    <select id="countries">
+      <option value="">Select a country</option>
+      <option value="Europe/Paris">Paris 🇫🇷</option>
+      <option value="Asia/Tokyo">Tokyo 🇯🇵</option>
+      <option value="Australia/Sydney">Sydney 🇦🇺</option>
+    </select>
+    <script>
+      function showCountryTimeZone(event) {
+        if (event.target.value.length > 0) {
+          let currentTime = moment()
+            .tz(event.target.value)
+            .format("dddd, MMMM D, YYYY h:mm A");
+
+          alert(`It is ${currentTime} in ${event.target.value}`);
+        } else {
+          alert("Please select a country from the dropdown");
+        }
+      }
+
+      let countrySelectionElement = document.querySelector("#countries");
+      countrySelectionElement.addEventListener("change", showCountryTimeZone);
+    </script>
+  </body>
+</html>

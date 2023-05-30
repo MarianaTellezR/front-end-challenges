@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Class Manipulation Challenge</title>
+    <style>
+      .c-body {
+        background-color: white;
+      }
+      .dark {
+        background-color: black;
+      }
+      button {
+        background-color: black;
+        color: white;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin: 30px auto;
+        display: block;
+        padding: 10px 20px;
+        font-size: 18px;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="c-body">
+    <button>Dark theme</button>
+    <script>
+      function makeItDark() {
+        let back = document.querySelector(".c-body");
+        back.classList.add("dark");
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", makeItDark);
+    </script>
+  </body>
+</html>
